@@ -1,0 +1,4 @@
+*.pdf
+.vem
+node_modules/
+subirActividad.txt
