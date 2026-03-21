@@ -20,18 +20,18 @@ test("find user by email: santiago@generation.org from Santiago", () => {
   let user = new User(1234, "Santiago", "santiago@generation.org");
   userController.add(user);
   const foundUser = userController.findByEmail("santiago@generation.org"); //cambiar con otro correo para verificar que los compara
-  console.log(user.equalsTo(foundUser));
+  // console.log(user.equalsTo(foundUser));
   // expect(foundUser).toEqual(user); también funciona con esto
-  expect(foundUser).toBe(user);
+  expect(foundUser).toStrictEqual(user);
 });
 
 test("find user by email: juan@generation.org from Juan", () => {
-  let user = new User(1234, "Juan", "santiago@generation.org");
+  let user = new User(1234, "Juan", "juan@generation.org");
   userController.add(user);
   const foundUser = userController.findByEmail("juan@generation.org"); //cambiar con otro correo para verificar que los compara
-  console.log(user.equalsTo(foundUser));
+  // console.log(user.equalsTo(foundUser));
   // expect(foundUser).toEqual(user); también funciona con esto
-  expect(foundUser).toBe(user);
+  expect(foundUser).toStrictEqual(user);
 });
 
 test("find user by Id: 4321 from Carlo", () => {
