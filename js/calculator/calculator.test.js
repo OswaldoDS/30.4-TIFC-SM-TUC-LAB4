@@ -24,6 +24,11 @@ test("divide 100 / 10 to equal 5", () => {
   expect(calculator.divide(100, 10)).toBe(10);
 });
 
+test("divide 40 / 0 to equal false", () => {
+  // expect(calculator.divide(40, 0)).toBe(false);
+  expect(() => calculator.divide(40, 0)).toThrow("Cannot divide by zero");
+});
+
 test("multiply 15 * 3 to equal 45", () => {
   expect(calculator.multiply(15, 3)).toBe(45);
 });
